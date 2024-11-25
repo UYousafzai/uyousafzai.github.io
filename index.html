@@ -107,20 +107,36 @@
 
         <div class="introduction">
             <h4>Publications</h4>
-            <div class="year">2021</div>
+            <div class="year">2023</div>
+			<ul>
+				<li>
+					<a href="./assets/documents/WorVis.pdf">
+						WordVIS: A Color Worth A Thousand Words
+					</a>
+					<span class="collaborators"><a href="https://scholar.google.com/citations?user=gUgRrnkAAAAJ&hl=en" target="_blank">U.Khan</a>, S.Saifullah, S.Agne, A.Dengel, S.Ahmed.
+					</span>
+                    <span class="code_blog">
+						<a href=./assets/documents/WorVis.pdf" target="_blank">[paper]</a>
+					</span>
+					<span class="project_description">
+					<i>(Currently Used in production, Preprint Only)</i>	
+					</span>
+				</li>
+			</ul>
+			<div class="year">2021</div>
             <ul>
                 <li>
                     <a href="https://arxiv.org/abs/2104.14237" class="project" target="_blank">
 							TabAug: Data Driven Augmentation for Enhanced Table Structure Recognition
-						</a>
+					</a>
                     <span class="collaborators"><a href="https://scholar.google.com/citations?user=gUgRrnkAAAAJ&hl=en" target="_blank">Umar Khan</a>, Sohaib Zahid, Muhammad Asad Ali, <a href="https://scholar.google.com/citations?user=U5-TXNAAAAAJ&hl=de">Adnan ul Hassan</a>, <a href="https://scholar.google.com/citations?user=o9RCNZYAAAAJ&hl=en" target="_blank">Faisal Shafait</a>
 					</span>
                     <span class="code_blog">
 							<a href="https://arxiv.org/abs/2104.14237" target="_blank">[paper]</a>
-						</span>
+					</span>
                     <span class="project_description">
 							Publication Status: Accepted at <a href="https://icdar2021.org" target="_blank">ICDAR2021</a>
-						</span>
+					</span>
                 </li>
                 <li>
                     <a href="https://drive.google.com/file/d/1iSqR1b4DKAJKV2V8uH8ncp_FfGMITAcz/view" class="project" target="_blank">
@@ -138,35 +154,120 @@
 
 
             <h4>Notable Projects</h4>
+			<div class="year">2024</div>
+			<ul>
+				<li>
+                    <a href="https://deepreader.de" class="project">
+							ChemSpec
+					</a>
+                    <span class="collaborators">Spec Sheet Extractions SER</span>
+                    <span class="project_description">
+						Key agnostic NER was performed on chemical spec-sheets using SER model, specifics of
+						the model architecture and configurations can not be shared due to proprietery nature of
+						the software currently in production.
+					</span>
+                </li>
+				<li>
+                    <a href="https://deepreader.de" class="project">
+							AutoAnnot
+					</a>
+                    <span class="collaborators">Auto Annotations Using LLM's</span>
+                    <span class="project_description">
+						I spearheaded the development of a multi-agent framework for various tasks, our test
+						task was generating automatic annotations from documents, with minimal human supervision we
+						are able to generate a single doucment annotation with an average time of 1.43 ~ 2 seconds with further
+						humand correction leading up to a total 7.8 ~ 8 seconds.
+						previously same document was annotated by annotators, personal recorded time for annotating the
+						same document is 94 seconds. This annotation tool offers over 11x speed up for annotators. 
+					</span>
+                </li>
+				<li>
+                    <a href="https://deepreader.de" class="project">
+							DataSage
+					</a>
+                    <span class="collaborators">Document Retrieval Paired with LLM</span>
+                    <span class="project_description">
+						A novel method was introduced for increasing the reference vector data points for document
+						retrieval leading to accurate data retrieval from smaller text chunks paired with LLM's for
+						QA on source Databases. This RAG based system allows our clients to rapidly add new data to
+						over 27k documents database and ask questions from LLM using this database with an average
+						sub-second response.
+					</span>
+                </li>
+				<li>
+                    <a href="https://deepreader.de" class="project">
+							Teacher Student Model Trainings
+					</a>
+                    <span class="collaborators">LLM used for generating task specific data</span>
+                    <span class="project_description">
+						Larger LLM's acting as the teacher models were used to generate task specific data for
+						various smaller models including LayoutLMV2 to be trained for specific NER and Classification
+						Tasks. Various text processing techniques were used to generate textual and image data.
+					</span>
+                </li>
+			</ul>
+			<div class="year">2023</div>
+			<ul>
+				<li>
+                    <a href="https://deepreader.de" class="project">
+							LLM Finetune using LoRA
+					</a>
+                    <span class="collaborators">LLM Finetune for task specific extraction</span>
+                    <span class="project_description">
+						LLM was finetuned for specific task extractions using LoRA (Low Rank Adaptation).
+						This allowed us to train LLM using relatively low resources and achieve a a convergence on
+						a specific task using LLM's.
+					</span>
+                </li>
+				<li>
+                    <a href="https://deepreader.de" class="project">
+							LLM Based Extraction
+					</a>
+                    <span class="collaborators">LLM based extraction services using CPU only environment</span>
+                    <span class="project_description">
+						LLM based extraction services built upon llama.cpp, grammar and non grammar based ghost
+						elimination services were introduced for removing any helluciniations from the LLM's. a
+						100 percent conformity with the source document was established. read more on GBNF (GGML BNF)
+						format <a href="https://github.com/ggerganov/llama.cpp/blob/master/grammars/README.md">here</a>.
+					</span>
+                </li>
+			</ul>
 			<div class="year">2022</div>
             <ul>
 				<li>
-					<a href="https://deepreader.de"> DeepReader AI</a>
-					<span class="collaborators">Data Extraction Automation Services</span>
-					<span>
-						Currently working on following projects:
-						<br>
-						1. Using GNN's for NER.
-						<br>
-						2. Table Detection and Recognition using Lightweight Models.
-						<br>
-						3. Implementing Custom OCR model and lifecycle for constant improvement.
-						<br>
-						4. Deep Learning based perspective transformations for data extraction services.
+                    <a href="https://deepreader.de" class="project">
+							Block Segmentation and Tiling
+					</a>
+                    <span class="collaborators">Block segmentation using ocr based closing</span>
+                    <span class="project_description">
+						block segmentation required for training various transformers based algorithms for
+						feeding consistent data blocks leading up to drastic increase in recall in NER tasks.
+						Document tiling and feeding tiling information during training increased the accuracy
+						in various NER Tasks.
 					</span>
-				</li>
+                </li>
+				<li>
+                    <a href="https://deepreader.de" class="project">
+							GNN Document Classifier
+					</a>
+                    <span class="collaborators">Document Classification</span>
+                    <span class="project_description">
+						GNN Based Document Classifier microservice for lightweight inference in CPU only
+						environemnt. the evaluation on customer data yielded 98.4% accuracy.
+					</span>
+                </li>
 			</ul>
 			<div class="year">2021</div>
             <ul>
                 <li>
                     <a href="https://deepreader.de" class="project">
 							DeepReader AI
-						</a>
+					</a>
                     <span class="collaborators">Data Extraction Automation from German Language Documents</span>
                     <span class="project_description">
-						Trained state of the art NER for German Documents, we've seen a massive improvements in results by employing
-						different strategies for training and given the green light for open sourcing from the company I might 
-						document my experimentation in my <a href="blog.html">blog</a>.
+						NER on German Documents using a Custom Derivative Model from LayoutLMV2, IP owned by the company,
+						architecture can not be open sourced.
+						<a href="blog.html">blog</a>.
 					</span>
                 </li>
                 <li>
