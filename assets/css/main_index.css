@@ -6,8 +6,12 @@ body {
   font-family: "Ubuntu", sans-serif;
   font-weight: normal;
   color: #333;
-  line-height: 1.5;
+  line-height: 1.6; /* Increased slightly for better readability */
   font-size: 16px;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 a.nodecor {
@@ -17,6 +21,7 @@ a.nodecor {
 a, a:hover {
   color: #a00;
   text-decoration: none;
+  transition: color 0.2s ease-in-out;
 }
 
 html, button, input, select, textarea {
@@ -125,7 +130,7 @@ h6 {
 }
 
 ul {
-  padding-left: 15px;
+  padding-left: 25px;
 }
 
 ul.flat {
@@ -152,11 +157,11 @@ ul.flat li {
 }
 
 ul {
-  list-style: disc inside;
+  list-style: disc outside;
 }
 
 .introduction ul li {
-  margin-bottom: 10px;
+  margin-bottom: 30px; /* Increased spacing between items */
 }
 
 .introduction ul li p {
@@ -196,6 +201,12 @@ ul {
   height: auto;
   border-radius: 50%;
   /* float: left; */
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.header .profile_image:hover {
+    transform: scale(1.03);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.1);
 }
 
 .header h1, .header h2 {
@@ -304,11 +315,22 @@ ul {
 
 .year {
   font-size: 20px;
-  margin-bottom: -.6em;
+  margin-bottom: 15px;
+  font-weight: bold;
+  color: #330;
 }
 
 .project {
-  margin: .5em -.5em 0em;
+  margin: 0;
+  display: inline-block;
+  /* Smoother transition for both hover ON and hover OFF */
+  transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1), color 0.3s ease;
+  will-change: transform;
+  backface-visibility: hidden; /* Helps with rendering crispness during animation */
+}
+
+.project:hover {
+    transform: translateX(5px);
 }
 
 .publications {
@@ -389,6 +411,19 @@ ul {
   margin-right: 15px;
 }
 
+/* Animation Classes */
+.hidden-section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  will-change: opacity, transform;
+}
+
+.visible-section {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 @media (max-width: 767px) {
   body {
     padding: 20px;
@@ -414,4 +449,38 @@ ul {
   body {
     font-size: 14px;
   }
+}
+
+/* Staggered List Animation */
+.staggered-list li {
+  opacity: 0;
+  transform: translateX(-15px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.staggered-list.visible-section li {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Link Underline Animation */
+a.project {
+  position: relative;
+  /* Removing default underline from base styles if any, ensuring our custom one works */
+  text-decoration: none;
+}
+
+a.project::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: -2px;
+  left: 0;
+  background-color: #a00;
+  transition: width 0.3s ease;
+}
+
+a.project:hover::after {
+  width: 100%;
 }
